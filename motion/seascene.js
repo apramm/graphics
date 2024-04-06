@@ -50,7 +50,7 @@ var renderer = new THREE.WebGLRenderer({ antialias: false });
 renderer.setClearColor(0x000000, 0);   // set background colour
 canvas.appendChild(renderer.domElement);
 const loader = new THREE.TextureLoader();
-loader.load('/images/seaback.jpg' , function(texture)
+loader.load('images/seaback.jpg' , function(texture)
             {
              scene.background = texture;  
             }); 
@@ -663,7 +663,7 @@ function initObjects() {
     scene.add( mybox );
 
     // textured floor
-    var floorTexture = new THREE.TextureLoader().load('/images/seafloor.png');
+    var floorTexture = new THREE.TextureLoader().load('images/seafloor.png');
     floorTexture.wrapS = floorTexture.wrapT = THREE.RepeatWrapping;
     floorTexture.repeat.set(1, 1);
     var floorMaterial = new THREE.MeshBasicMaterial({ map: floorTexture, side: THREE.DoubleSide });
